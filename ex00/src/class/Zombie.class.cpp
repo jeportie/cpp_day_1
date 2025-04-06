@@ -6,7 +6,7 @@
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 08:54:55 by jeportie          #+#    #+#             */
-/*   Updated: 2025/04/06 08:54:56 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/04/06 17:16:17 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Zombie::Zombie(void)
 {
-    std::cout << this->_name << " was summoned from the dead" << std::endl;
+    std::cout << this->_name << "A new rotted corpse was summoned from the dead" << std::endl;
     return;
 }
 
@@ -31,19 +31,8 @@ void Zombie::announce(void)
     return;
 }
 
-Zombie* Zombie::newZombie(std::string name)
+void Zombie::setName(std::string name)
 {
-    Zombie* newcomer;
-
-    newcomer    = new Zombie();
     this->_name = name;
-    return (newcomer);
-}
-
-void Zombie::randomChump(std::string name)
-{
-    Zombie newcomer;
-	this->_name = name;
-	newcomer.announce();
-	return ;
+    return;
 }

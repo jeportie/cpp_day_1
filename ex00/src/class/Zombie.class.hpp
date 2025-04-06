@@ -6,7 +6,7 @@
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 08:55:03 by jeportie          #+#    #+#             */
-/*   Updated: 2025/04/06 10:37:50 by jeportie         ###   ########.fr       */
+/*   Updated: 2025/04/06 17:18:15 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@
 class Zombie
 {
 public:
-	void	announce(void);
-	Zombie*	newZombie(std::string name); // heap (use new)
-	void	randomChump(std::string name); //stack 
+	void announce(void);
+	void setName(std::string name);
 
     Zombie(void);
     ~Zombie(void);
@@ -29,5 +28,8 @@ public:
 private:
     std::string _name;
 };
+
+Zombie* newZombie(std::string name);
+void randomChump(std::string name);
 
 #endif  // ************************************************** ZOMBIE_CLASS_HPP //

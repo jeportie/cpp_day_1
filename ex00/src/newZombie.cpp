@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Default.class.hpp                                  :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 10:12:31 by jeportie          #+#    #+#             */
-/*   Updated: 2025/04/06 10:37:45 by jeportie         ###   ########.fr       */
+/*   Created: 2025/04/06 17:04:43 by jeportie          #+#    #+#             */
+/*   Updated: 2025/04/06 17:13:43 by jeportie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEFAULT_HPP
-# define DEFAULT_HPP
+#include "class/Zombie.class.hpp"
 
+Zombie* newZombie(std::string name)
+{
+    Zombie* newcomer;
 
-
-#endif  // ************************************************ DEFAULT_CLASS_HPP //
+    newcomer    = new Zombie();
+	newcomer->setName(name);
+    return (newcomer);
+}
