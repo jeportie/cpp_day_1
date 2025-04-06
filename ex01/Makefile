@@ -22,6 +22,7 @@ ARGS=$(filter-out $@,$(MAKECMDGOALS))
 #### BEGIN AUTO GENERATED FILES ###
 # List of source files:
 SRC = \
+  src/zombieHorde.cpp \
   src/class/Zombie.class.cpp 
 ### END AUTO GENERATED FILES ###
 
