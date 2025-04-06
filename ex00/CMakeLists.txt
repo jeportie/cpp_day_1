@@ -12,7 +12,7 @@
 
 cmake_minimum_required(VERSION 3.10)
 
-project(myPhoneBook LANGUAGES CXX)
+project(zombie LANGUAGES CXX)
 
 # Set C++ standard and compilation flags
 set(CMAKE_CXX_STANDARD 98)
@@ -56,12 +56,12 @@ include(GoogleTest)
 # Test executable
 file(GLOB TEST_SOURCES "${CMAKE_SOURCE_DIR}/tests/*.cpp")
 
-add_executable(test_myPhoneBook ${TEST_SOURCES} ${CMAKE_SOURCE_DIR}/src/PhoneBook.class.private.cpp ${CMAKE_SOURCE_DIR}/src/PhoneBook.class.public.cpp ${CMAKE_SOURCE_DIR}/src/Contact.class.cpp)
+#add_executable()
 
-target_link_libraries(test_myPhoneBook
+target_link_libraries(test_$(PROJECT_NAME)
     GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(test_myPhoneBook)
-#add_dependencies(test_megaphone megaphone)
+gtest_discover_tests(test_$(PROJECT_NAME))
+#add_dependencies()

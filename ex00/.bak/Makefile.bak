@@ -17,12 +17,13 @@ OUTDIR = bin
 SRCDIR = src
 OBJDIR = obj
 MAIN = main.cpp
-ARGS=$(filter-out $@,$(MAKECMDGOALS))
 
 #### BEGIN AUTO GENERATED FILES ###
 # List of source files:
 SRC = \
-  src/class/Zombie.class.cpp 
+  src/Contact.class.cpp \
+  src/PhoneBook.class.private.cpp \
+  src/PhoneBook.class.public.cpp 
 ### END AUTO GENERATED FILES ###
 
 # Create object for main.cpp
@@ -64,9 +65,9 @@ fclean: clean
 re: fclean all
 
 build_and_run: all
-	./$(OUTDIR)/$(NAME) $(ARGS)
+	./$(OUTDIR)/$(NAME)
 
 run:
-	./$(OUTDIR)/$(NAME) $(ARGS)
+	./$(OUTDIR)/$(NAME)
 
 .PHONY: all clean fclean re build_and_run run
