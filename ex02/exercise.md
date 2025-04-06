@@ -22,4 +22,4 @@ That's all—no tricks. The goal of this exercise is to demystify references, wh
 seem completely new. Although there are some small differences, this is simply another
 syntax for something you already do: address manipulation.
 
-**Files to turn in**: Makefile, main.cpp
+**Files to turn in**: main.cpp
