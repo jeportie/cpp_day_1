@@ -10,4 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_CLASS_HPP
+# define ZOMBIE_CLASS_HPP
 
+# define SOUND "BraiiiiiiinnnzzzZ..."
+# include <string>
+
+class Zombie
+{
+public:
+	void	announce(void);
+	Zombie*	newZombie(std::string name); // heap (use new)
+	void	randomChump(std::string name); //stack 
+
+    Zombie(void);
+    ~Zombie(void);
+
+private:
+    std::string _name;
+};
+
+#endif  // ************************************************** ZOMBIE_CLASS_HPP //
