@@ -22,7 +22,9 @@ ARGS=$(filter-out $@,$(MAKECMDGOALS))
 #### BEGIN AUTO GENERATED FILES ###
 # List of source files:
 SRC = \
-  src/class/Weapon.cpp 
+  src/class/Weapon.cpp \
+  src/class/HumanB.cpp \
+  src/class/HumanA.cpp 
 ### END AUTO GENERATED FILES ###
 
 # Create object for main.cpp
@@ -66,7 +68,7 @@ re: fclean all
 build_and_run: all
 	./$(OUTDIR)/$(NAME) $(ARGS)
 
-run:
-	./$(OUTDIR)/$(NAME) $(ARGS)
+valgrind: all
+	valgrind --leak-check=full ./$(OUTDIR)/$(NAME) $(ARGS)
 
 .PHONY: all clean fclean re build_and_run run
