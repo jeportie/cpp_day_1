@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brains
+NAME = violence
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OUTDIR = bin
@@ -22,6 +22,7 @@ ARGS=$(filter-out $@,$(MAKECMDGOALS))
 #### BEGIN AUTO GENERATED FILES ###
 # List of source files:
 SRC = \
+  src/class/Weapon.cpp 
 ### END AUTO GENERATED FILES ###
 
 # Create object for main.cpp
