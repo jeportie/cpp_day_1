@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = violence
+NAME = sed
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OUTDIR = bin
@@ -22,10 +22,6 @@ ARGS=$(filter-out $@,$(MAKECMDGOALS))
 #### BEGIN AUTO GENERATED FILES ###
 # List of source files:
 SRC = \
-  src/class/Weapon.cpp \
-  src/class/HumanB.cpp \
-  src/class/HumanA.cpp 
-### END AUTO GENERATED FILES ###
 
 # Create object for main.cpp
 MAIN_OBJ = $(OBJDIR)/main.o
