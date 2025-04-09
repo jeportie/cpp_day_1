@@ -11,8 +11,9 @@
 # **************************************************************************** #
 
 NAME = zombie
-CXX = c++
+CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+VALFLAGS = --leak-check=full
 OUTDIR = bin
 SRCDIR = src
 OBJDIR = obj
@@ -67,7 +68,13 @@ re: fclean all
 build_and_run: all
 	./$(OUTDIR)/$(NAME) $(ARGS)
 
-run:
-	./$(OUTDIR)/$(NAME) $(ARGS)
+valgrind: all
+	valgrind $(VALFLAGS) ./$(OUTDIR)/$(NAME) $(ARGS)
+	
+run_with_args: all
+	bash /sh/run_with_args.sh
+
+val_with_args: all
+	bash /sh/val_with_args.sh
 
 .PHONY: all clean fclean re build_and_run run
