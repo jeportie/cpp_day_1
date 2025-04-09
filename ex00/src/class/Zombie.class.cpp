@@ -15,7 +15,7 @@
 
 Zombie::Zombie(void)
 {
-    std::cout << this->_name << "A new rotted corpse was summoned from the dead" << std::endl;
+    std::cout << this->_name << "A new corpse was summoned from the dead" << std::endl;
     return;
 }
 
