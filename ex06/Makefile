@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = harlFilter
-CXX = c++
+CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 VALFLAGS = --leak-check=full
 OUTDIR = bin
