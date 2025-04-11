@@ -30,31 +30,12 @@ void heapZombieScenario()
     delete heapZombie;
 }
 
-void mixedZombieScenario()
-{
-    std::cout << "Creating a mix of stack and heap zombies..." << std::endl;
-    randomChump("Bob");
-    Zombie* heapZombie = newZombie("Antoine");
-    heapZombie->announce();
-    std::cout << "Deleting heap zombie manually..." << std::endl;
-    delete heapZombie;
-    std::cout << "Stack zombie goes out of scope and is destroyed." << std::endl;
-}
-
 int main(void)
 {
-    std::cout << BLUE << "Welcome to the Zombie Army! " << RESET << std::endl;
-
-    std::cout << RED << "\n--- Stack Zombie Scenario ---" << RESET << std::endl;
+    std::cout << RED << "--- Stack Zombie Scenario ---" << RESET << std::endl;
     stackZombieScenario();
-
     std::cout << GREEN << "\n--- Heap Zombie Scenario ---" << RESET << std::endl;
     heapZombieScenario();
 
-    std::cout << YELLOW <<"\n--- Mixed Zombie Scenario ---" << RESET << std::endl;
-    mixedZombieScenario();
-
-    std::cout << "\nAll zombies have been dealt with. It's the end of the zombie apocalypse!"
-              << std::endl;
     return 0;
 }
