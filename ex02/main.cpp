@@ -27,6 +27,10 @@ int main()
     std::cout << "Memory address of the string variable: " << &brain << std::endl;
     std::cout << "Memory address held by stringPTR: " << stringPTR << std::endl;
     std::cout << "Memory address held by stringREF: " << &stringREF << std::endl;
+	std::cout << std::endl;
+    std::cout << "Memory address of stringPTR: " << &stringPTR << std::endl;
+    std::cout << "Memory address of stringREF: " << &stringREF << std::endl;
+	std::cout << std::endl;
 
     // Print the values
     std::cout << "Value of the string variable: " << brain << std::endl;
