@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = violence
-CXX = clang++
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 VALFLAGS = --leak-check=full
 OUTDIR = bin
