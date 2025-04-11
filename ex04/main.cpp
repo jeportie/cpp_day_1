@@ -19,9 +19,14 @@
 
 void replaceString(std::string& content, const std::string& s1, const std::string& s2)
 {
-    size_t pos = 0;
+    if (s1.empty())
+    {
+        std::cerr << "Error: search string cannot be empty" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
 
-    pos = content.find(s1, pos);
+    size_t pos = 0;
+    pos        = content.find(s1, pos);
     while (pos != std::string::npos)
     {
         content.erase(pos, s1.length());
@@ -38,6 +43,11 @@ void safeIfs(std::ifstream& inputFile, const std::string& filename)
     if (!inputFile)
     {
         std::cerr << "Error: could not open file " << filename << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
+    if (inputFile.peek() == std::ifstream::traits_type::eof())
+    {
+        std::cerr << "Error: file " << filename << " is empty" << std::endl;
         std::exit(EXIT_FAILURE);
     }
 }
@@ -59,7 +69,7 @@ std::string cpFile(std::ifstream& inputFile)
     std::string content(
         (std::istreambuf_iterator<char>(inputFile)),  // Set the start <char> of the file.
         std::istreambuf_iterator<char>());            // Set the end <char> of the file.
-	return (content);
+    return (content);
 }
 
 int main(int argc, char* argv[])
@@ -73,12 +83,12 @@ int main(int argc, char* argv[])
         return (1);
     }
 
-	std::string filename = argv[1];
-	std::string s1       = argv[2];
-	std::string s2       = argv[3];
+    std::string filename = argv[1];
+    std::string s1       = argv[2];
+    std::string s2       = argv[3];
 
     safeIfs(inputFile, filename);
-	std::string content = cpFile(inputFile);
+    std::string content = cpFile(inputFile);
     inputFile.close();
     replaceString(content, s1, s2);
     safeOfs(outputFile, filename);
