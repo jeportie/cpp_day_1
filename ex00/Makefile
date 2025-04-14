@@ -23,9 +23,9 @@ ARGS=$(filter-out $@,$(MAKECMDGOALS))
 #### BEGIN AUTO GENERATED FILES ###
 # List of source files:
 SRC = \
-  src/class/Zombie.class.cpp \
-  src/randomChump.cpp \
-  src/newZombie.cpp 
+  src/class/Zombie.cpp \
+  src/newZombie.cpp \
+  src/randomChump.cpp 
 ### END AUTO GENERATED FILES ###
 
 # Create object for main.cpp
