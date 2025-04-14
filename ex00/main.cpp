@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "src/class/Zombie.class.hpp"
+#include "src/class/Zombie.hpp"
 #include "include/colors.hpp"
 #include <iostream>
 
